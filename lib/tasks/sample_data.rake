@@ -17,4 +17,12 @@ namespace :db do
 									 password_confirmation: password)
 		end
 	end
+	
+	desc "Make only admin in database"
+	task populate_admin: :environment do
+		User.create!(name: "Andreas Ofner",
+								 email: "andreas.ofner@gmx.at",
+								 password: "foobar",
+								 password_confirmation: "foobar",
+								 admin: true)
 end
