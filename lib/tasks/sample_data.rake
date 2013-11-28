@@ -25,4 +25,5 @@ namespace :db do
 								 password: "foobar",
 								 password_confirmation: "foobar",
 								 admin: true)
+	end
 end
